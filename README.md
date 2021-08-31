@@ -3,7 +3,7 @@
 <br />
 <p align="center">
 
-  <h3 align="center">Calculator</h3>
+  <h3 align="center">Library</h3>
 
   <p align="center">
     An online Library using HTML,CSS and vanilla Javascript
@@ -32,7 +32,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-![Calculator Webpage Screenshot](https://raw.githubusercontent.com/bilgramiraza/Library/main/Images/WebPage.png)
+![Library Webpage Screenshot](https://raw.githubusercontent.com/bilgramiraza/Library/main/Images/WebPage.png)
 
 This project is built using HTML/CSS and vanilla JavaScript
 
