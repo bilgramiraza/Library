@@ -15,32 +15,29 @@
     <h2>By Syed Mohd Raza Hassan Bilgrami</h2>
     <main>
         <div class="bookShelf">
-            <button id="previous"><</button>
-            <button id="next">></button>
-
         </div>
-        <div class="display ">
+        <div class="display">
             <button id="add">+</button>
-            <p id="title">Title</p>
-            <p id="author">Author</p>
-            <p id="pages">Pages</p>
-            <p id="read">Read</p>
+            <p id="title"></p>
+            <p id="author"></p>
+            <p id="pages"></p>
+            <p id="read"></p>
             <button id="remove">X</button>
         </div>
-        <div class="input">
+        <div class="input hide">
             <label>
-                Title: <input type="text" id="inputTitle">
+                Title: <input type="text" id="inputTitle" required>
             </label>
             <label>
-                Author: <input type="text" id="inputAuthor">
+                Author: <input type="text" id="inputAuthor" required>
             </label>
             <label>
-                Pages: <input type="text" id="inputPages">
+                Pages: <input type="text" id="inputPages" required>
             </label>
             <label>
                 Read? <input type="checkbox" id="inputRead">
             </label>
-            <button id="submit"></button>
+            <button id="submit">Submit</button>
         </div>
     </main>
 
