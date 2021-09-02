@@ -35,7 +35,6 @@ main{
     border:0.125rem solid gold;
 }
 .bookShelf{
-    position: relative;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(6,1fr);
@@ -67,16 +66,6 @@ button:hover{
 button:active{
     opacity: 1;
 }
-#previous,#next{
-    top:50%;
-    position: absolute;
-}
-#previous{
-    left: 0;
-}
-#next{
-    right:0;
-}
 #add,#remove{
     right: 0;
     position: absolute;
@@ -86,6 +75,12 @@ button:active{
 }
 #remove{
     bottom: 0;
+}
+#submit{
+    opacity: 1;
+    margin: 0 25%;
+    max-width:50%;
+    font-size: 1em;
 }
 .book{
     text-align: center;
