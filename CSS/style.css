@@ -11,6 +11,8 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-image:linear-gradient(0deg,#a52a2a 0% 5%, gray 5% 12%,black 12% 13%, #D4A0A7 12% 98%,#a52a2a 98% 100% );
+    background-size: cover;
 }
 
 h1{
@@ -22,7 +24,7 @@ h2{
 
 main{
     width: 95%;
-    height: 70%;
+    height: 90%;
     margin:1em 0;
     display: flex;
     flex-direction: row;
@@ -31,14 +33,20 @@ main{
 
 .bookShelf,.display,.input{
     width: 45%;
-    height: 100%;
-    border:0.125rem solid gold;
+    height: 97%;
+    padding: 0.5%;
+    border:4px solid black; 
 }
 .bookShelf{
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: repeat(3,1fr);
+    gap: 1%;
+    background-image:linear-gradient(0deg,#862323 0% 1%, #a52a2a 1% 33%,
+                                          #862323 33% 34%,#a52a2a 34% 66%,
+                                          #862323 66% 67%,#a52a2a 67% 99%,
+                                          #862323 99% 100%);
 }
 .display{
     position: relative;
@@ -48,6 +56,7 @@ main{
     align-content: center;
     text-align: center;
     font-size: 3em;
+    background-color: #a52a2a;
 }
 .input{
     display: flex;
@@ -56,6 +65,7 @@ main{
     align-content: center;
     text-align: center;
     font-size: 2em;
+    background-color: white;
 }
 button{
     opacity: 0.3;
@@ -87,16 +97,23 @@ button:active{
     padding: 0 25%;
     writing-mode: vertical-rl;
     text-orientation:mixed;
+    font-size: 1.25em;
     outline: black solid 0.0625rem;
 }
 .book:hover{
-    outline: gold solid 0.0625rem;
+    outline: #0094C6 solid 0.125rem;
+}
+#title,#author,#pages{
+    background-color: #D4A0A7;
+    outline:black solid 0.0625em;
 }
 .read{
-    background-color: green;
+    color: black;
+    background-color: #99C24D;
 }
 .notread{
-    background-color: red;
+    color: white;
+    background-color: #1D3461;
 }
 .hide{
     display: none;
