@@ -11,9 +11,11 @@ window.onload=init();
 function init() {
     const addBtn=document.querySelector('#add');
     const delBtn=document.querySelector('#remove');
+    const readEditbtn=document.querySelector('.material-icons');
     const bookShelf=document.querySelector('.bookShelf');
     addBtn.addEventListener('click',addBookHandling);
     delBtn.addEventListener('click',delBookHandling);
+    readEditbtn.addEventListener('click',bookReadToggle);
     bookShelf.addEventListener('click',(event)=>{
         displayBookHandling(event.target.textContent);
     });
@@ -105,15 +107,30 @@ function displayBook(book) {
     title.textContent=book.title;
     author.textContent=book.author;
     pages.textContent=book.pageCount;
-    if(book.isRead)
+    if(book.isRead){
         read.textContent='Read';
-    else
+        read.parentNode.classList.remove('notread');
+        read.parentNode.classList.add('read');
+    }
+    else{
         read.textContent='Not Read';
+        read.parentNode.classList.remove('read');
+        read.parentNode.classList.add('notread');
+    }
 }
 
 function lookUp(title) {
     return library.map((book)=>{return book.title})
                   .indexOf(title);
+}
+
+function bookReadToggle() {
+    const title=document.querySelector('#title').textContent;
+    const read=document.querySelector('#read');
+    const index=lookUp(title);
+    library[index].isRead=!(library[index].isRead);
+    displayAll();
+    displayBook(library[index]);
 }
 
 function loadLibraryHandling() {

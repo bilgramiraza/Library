@@ -89,6 +89,9 @@ button:active{
     text-orientation:mixed;
     outline: black solid 0.0625rem;
 }
+.book:hover{
+    outline: gold solid 0.0625rem;
+}
 .read{
     background-color: green;
 }
@@ -97,4 +100,20 @@ button:active{
 }
 .hide{
     display: none;
+}
+#readDisplay{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    outline: black solid 0.0625em;
+}
+.material-icons{
+    font-size: 48px;
+    padding-left: 5%;
+    cursor: pointer;
+    border-left: 0.0625em solid black ;
 }
