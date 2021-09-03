@@ -35,6 +35,12 @@ function addBookHandling() {
 }
 function addBook(){
     const inputs=document.querySelectorAll('input');
+    let duplicateCheck=lookUp(inputs[0].value);
+    if(duplicateCheck!==-1){
+        alert('Book Already Exists.');
+        toggleVisibility();
+        return;
+    }
     library.push(new Book(inputs[0].value,
                         inputs[1].value,
                         parseInt(inputs[2].value,10),
