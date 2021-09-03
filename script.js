@@ -39,6 +39,7 @@ function addBook(){
                         inputs[1].value,
                         parseInt(inputs[2].value,10),
                         inputs[3].checked));
+    localStorageUpdate();
     toggleVisibility();
     displayAll();
 }
@@ -65,6 +66,7 @@ function delBook(position) {
     let libraryLeft=library.slice(0,position);
     let libraryRight=library.slice(position+1);
     library=[...libraryLeft,...libraryRight];
+    localStorageUpdate();
     displayAll();
 }
 
@@ -129,13 +131,23 @@ function bookReadToggle() {
     const read=document.querySelector('#read');
     const index=lookUp(title);
     library[index].isRead=!(library[index].isRead);
+    localStorageUpdate();
     displayAll();
     displayBook(library[index]);
 }
 
 function loadLibraryHandling() {
-    //TODO: Local data storage implementation
-    loadDummyData();
+    if(storageAvailable('localStorage'))
+    {
+        if(localStorage.length>0)
+            library=[...JSON.parse(localStorage.getItem('library'))];
+        else {
+            loadDummyData();
+            localStorage.setItem('library',JSON.stringify(library));
+        }
+    }
+    else
+        loadDummyData();
 }
 
 function loadDummyData() {
@@ -143,4 +155,38 @@ function loadDummyData() {
     library.push(new Book('The hobbit','J.R.R Tolkien',100,true));
     library.push(new Book('The cat in the hat','Dr. Suess',35,false));
     library.push(new Book('Sherlock Holmes','Sir Arthur Conan Doyle',175,true));
+}
+
+function storageAvailable(type) {
+    // Credit:https://developer.mozilla.org Taken from:
+    // https://developer.mozilla.org/en-US/docs/Web/API/Web_Storage_API/Using_the_Web_Storage_API
+    let storage;
+    try {
+        storage = window[type];
+        let x = '__storage_test__';
+        storage.setItem(x, x);
+        storage.removeItem(x);
+        return true;
+    }
+    catch(e) {
+        return e instanceof DOMException && (
+            // everything except Firefox
+            e.code === 22 ||
+            // Firefox
+            e.code === 1014 ||
+            // test name field too, because code might not be present
+            // everything except Firefox
+            e.name === 'QuotaExceededError' ||
+            // Firefox
+            e.name === 'NS_ERROR_DOM_QUOTA_REACHED') &&
+            // acknowledge QuotaExceededError only if there's something already stored
+            (storage && storage.length !== 0);
+    }
+}
+
+function localStorageUpdate() {
+    if(!storageAvailable('localStorage'))
+        return;
+    localStorage.clear();
+    localStorage.setItem('library',JSON.stringify(library));
 }
