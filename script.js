@@ -157,10 +157,13 @@ function loadLibraryHandling() {
 }
 
 function loadDummyData() {
-    library.push(new Book('The Lord of the Rings','J.R.R Tolkien',250,false));
-    library.push(new Book('The hobbit','J.R.R Tolkien',100,true));
-    library.push(new Book('The cat in the hat','Dr. Suess',35,false));
-    library.push(new Book('Sherlock Holmes','Sir Arthur Conan Doyle',175,true));
+    library.push(new Book('LOTR:The Fellowship of the Ring','J.R.R Tolkien',479,false));
+    library.push(new Book('The Hobbit','J.R.R Tolkien',304,true));
+    library.push(new Book('The Cat in the Hat','Dr. Seuss',61,false));
+    library.push(new Book('The Adventures of Sherlock Holmes','Sir Arthur Conan Doyle',307,true));
+    library.push(new Book('Animal Farm','George Orwell',112,false));
+    library.push(new Book('The Great Gatsby','F. Scott Fitzgerald',160,true));
+    library.push(new Book('The Catcher in the Rye','J. D. Salinger',277,false));
 }
 
 function storageAvailable(type) {
