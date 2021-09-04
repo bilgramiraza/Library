@@ -13,6 +13,7 @@
     --color-white:#FFFFFF;
 }
 
+/*Body*/
 body{
     width:95vw;
     height: 95vh;
@@ -28,14 +29,31 @@ body{
                                    var(--color-primary) 98% 100% );
     background-size: cover;
 }
+/*Body*/
 
+/*Headimg*/
 h1{
     font-size: 4em;
 }
+/*Heading*/
+
+/*Sub-Heading*/
 h2{
     font-size: 1em;
 }
+a{
+    text-decoration: none;
+    color: var(--color-primary);
+}
+a:hover{
+    text-decoration: underline;
+}
+a:visited{
+    color: var(--color-primaryDark);
+}
+/*Sub-Heading*/
 
+/*Main Section*/
 main{
     width: 95%;
     height: 90%;
@@ -44,7 +62,6 @@ main{
     flex-direction: row;
     justify-content: space-evenly;
 }
-
 .bookShelf,.display,.input{
     width: 45%;
     height: 97%;
@@ -62,6 +79,20 @@ main{
                                           var(--color-primaryDark) 66% 67%,var(--color-primary) 67% 99%,
                                           var(--color-primaryDark) 99% 100%);
 }
+.display,.input{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+    text-align: start;
+    font-size: 3em;
+    flex-wrap: nowrap;
+    background-color: var(--color-primary);
+}
+/*Main Section*/
+
+/*BookShelf Section*/
 .book{
     text-align: center;
     padding: 0 25%;
@@ -81,25 +112,16 @@ main{
     color: var(--color-white);
     background-color: var(--color-accentTwo);
 }
+/*BookShelf Section*/
 
-.display,.input{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-content: center;
-    text-align: start;
-    font-size: 3em;
-    flex-wrap: nowrap;
-    background-color: var(--color-primary);
+/*Display/Input Section*/
+.hide{
+    display: none;
 }
+/*Display Section*/
 #title,#author,#pages{
     background-color: var(--color-compliment);
     outline:var(--color-black) solid 0.0625em;
-}
-input{
-    background-color: var(--color-compliment);
-    font-size: 0.75em;
 }
 #readDisplay{
     display: flex;
@@ -110,13 +132,6 @@ input{
     margin-right: auto;
     width: 70%;
     outline: var(--color-black) solid 0.0625em;
-}
-button{
-    font-size: 1em;
-    font-weight: 700;
-    background-color: transparent;
-    border:none;
-    cursor: pointer;
 }
 #add,#remove{
     right: 0;
@@ -131,23 +146,35 @@ button{
 #add:hover,#remove:hover{
     text-shadow:0.0625em 0.0625em 0 var(--color-highlight);
 }
-.inputButtons{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-#submit{
-    opacity: 1;
-    max-width:50%;
-    font-size: 1em;
-}
 .material-icons{
     font-size: 48px;
     padding-left: 5%;
     cursor: pointer;
     border-left: 0.0625em solid var(--color-black) ;
 }
-
-.hide{
-    display: none;
+/*Display Section*/
+/*Input Section*/ 
+input{
+    background-color: var(--color-compliment);
+    font-size: 0.75em;
 }
+button{
+    font-size: 1em;
+    font-weight: 700;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
+}
+.inputButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#submit,#cancel{
+    opacity: 1;
+    max-width:50%;
+    font-size: 1em;
+    outline: var(--color-black) solid 0.0625em;
+}
+
+/*Display/Input Section*/
