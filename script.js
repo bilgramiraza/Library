@@ -31,7 +31,12 @@ function addBookHandling() {
     }
     toggleVisibility();
     const submitBtn=document.querySelector('#submit');
+    const cancelBtn=document.querySelector('#cancel');
     submitBtn.addEventListener('click',addBook,{once:true});
+    cancelBtn.addEventListener('click',()=>{
+        toggleVisibility();
+        displayAll();
+    },{once:true});
 }
 function addBook(){
     const inputs=document.querySelectorAll('input');
