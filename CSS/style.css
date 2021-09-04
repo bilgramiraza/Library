@@ -143,8 +143,15 @@ main{
 #remove{
     bottom: 0;
 }
-#add:hover,#remove:hover{
+#add:hover{
     text-shadow:0.0625em 0.0625em 0 var(--color-highlight);
+    border-left:0.0625em solid var(--color-black);
+    border-bottom:0.0625em solid var(--color-black);
+}
+#remove:hover{
+    text-shadow:0.0625em 0.0625em 0 var(--color-highlight);
+    border-left:0.0625em solid var(--color-black);
+    border-top:0.0625em solid var(--color-black);
 }
 .material-icons{
     font-size: 48px;
@@ -157,6 +164,10 @@ main{
 input{
     background-color: var(--color-compliment);
     font-size: 0.75em;
+}
+input[type="checkbox"]{
+    height:1em;
+    width:1em;
 }
 button{
     font-size: 1em;
@@ -176,5 +187,4 @@ button{
     font-size: 1em;
     outline: var(--color-black) solid 0.0625em;
 }
-
 /*Display/Input Section*/
