@@ -54,7 +54,7 @@ main{
     flex-direction: column;
     justify-content: space-evenly;
     align-content: center;
-    text-align: center;
+    text-align: start;
     font-size: 3em;
     background-color: #a52a2a;
 }
@@ -63,18 +63,24 @@ main{
     flex-direction: column;
     justify-content: space-evenly;
     align-content: center;
-    text-align: center;
-    font-size: 2em;
-    background-color: white;
+    text-align: start;
+    font-size: 3em;
+    flex-wrap: nowrap;
+    background-color: #a52a2a;
+}
+input{
+    background-color: #D4A0A7;
+    font-size: 0.75em;
 }
 button{
-    opacity: 0.3;
+    font-size: 1em;
+    font-weight: 700;
+    background-color: transparent;
+    border:none;
+    cursor: pointer;
 }
-button:hover{
-    opacity: 0.7;
-}
-button:active{
-    opacity: 1;
+#add:hover,#remove:hover{
+    text-shadow:0.0625em 0.0625em 0 #0094C6;
 }
 #add,#remove{
     right: 0;
@@ -88,7 +94,6 @@ button:active{
 }
 #submit{
     opacity: 1;
-    margin: 0 25%;
     max-width:50%;
     font-size: 1em;
 }
@@ -101,7 +106,7 @@ button:active{
     outline: black solid 0.0625rem;
 }
 .book:hover{
-    outline: #0094C6 solid 0.125rem;
+    outline: #0094C6 solid 0.25rem;
 }
 #title,#author,#pages{
     background-color: #D4A0A7;
@@ -133,4 +138,9 @@ button:active{
     padding-left: 5%;
     cursor: pointer;
     border-left: 0.0625em solid black ;
+}
+.inputButtons{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }
