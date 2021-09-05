@@ -16,7 +16,9 @@
 /*Body*/
 body{
     width:95vw;
+    min-width: 950px;
     height: 95vh;
+    min-height: 750px;
     margin:1em auto;
     display: flex;
     flex-direction: column;
@@ -99,9 +101,11 @@ main{
     writing-mode: vertical-rl;
     text-orientation:mixed;
     font-size: 1.25em;
+    overflow:auto;
     outline: var(--color-black) solid 0.0625rem;
 }
 .book:hover{
+    cursor: pointer;
     outline: var(--color-highlight) solid 0.25rem;
 }
 .read{
@@ -120,8 +124,15 @@ main{
 }
 /*Display Section*/
 #title,#author,#pages{
+    display: inline-block;
     background-color: var(--color-compliment);
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y:hidden;
     outline:var(--color-black) solid 0.0625em;
+}
+#author{
+    max-width: 90%;
 }
 #readDisplay{
     display: flex;
