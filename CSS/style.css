@@ -131,6 +131,9 @@ main{
     overflow-y:hidden;
     outline:var(--color-black) solid 0.0625em;
 }
+#title{
+    text-align: center;
+}
 #author{
     max-width: 90%;
 }
@@ -143,6 +146,12 @@ main{
     margin-right: auto;
     width: 70%;
     outline: var(--color-black) solid 0.0625em;
+}
+.material-icons{
+    font-size: 48px;
+    padding-left: 5%;
+    cursor: pointer;
+    border-left: 0.0625em solid var(--color-black) ;
 }
 #add,#remove{
     right: 0;
@@ -163,12 +172,6 @@ main{
     text-shadow:0.0625em 0.0625em 0 var(--color-highlight);
     border-left:0.0625em solid var(--color-black);
     border-top:0.0625em solid var(--color-black);
-}
-.material-icons{
-    font-size: 48px;
-    padding-left: 5%;
-    cursor: pointer;
-    border-left: 0.0625em solid var(--color-black) ;
 }
 /*Display Section*/
 /*Input Section*/ 
@@ -197,5 +200,8 @@ button{
     max-width:50%;
     font-size: 1em;
     outline: var(--color-black) solid 0.0625em;
+}
+#submit:hover,#cancel:hover{
+    outline: var(--color-highlight) solid 0.0625em;
 }
 /*Display/Input Section*/
