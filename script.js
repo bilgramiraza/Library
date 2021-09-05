@@ -39,11 +39,11 @@ function addBookHandling() {
     toggleVisibility();         //Hides the Book display section
     const submitBtn=document.querySelector('#submit');
     const cancelBtn=document.querySelector('#cancel');
-    submitBtn.addEventListener('click',addBook,{once:true});
+    submitBtn.addEventListener('click',addBook);
     cancelBtn.addEventListener('click',()=>{
         toggleVisibility();
         displayAll();
-    },{once:true});
+    });
 }
 //Manages the ErrorHandling for the function
 //Responsible to add the book
@@ -55,23 +55,22 @@ function addBook(){
         toggleVisibility();
         return;
     }
-    if(inputs[0].value==="" ||
+    else if(inputs[0].value==="" ||
        inputs[1].value==="" ||
        inputs[2].value===""){
         alert('Please Fill All Fields');
-        toggleVisibility();
-        addBookHandling();     
         return;
     }
-
-    //Pushing the New Book object into the array
-    library.push(new Book(inputs[0].value,
-                        inputs[1].value,
-                        parseInt(inputs[2].value,10),
-                        inputs[3].checked));
-    localStorageUpdate();       //Update the localStorage 
-    toggleVisibility();         //Hides the input section
-    displayAll();               //Updates the shelf
+    else{
+        //Pushing the New Book object into the array
+        library.push(new Book(inputs[0].value,
+                            inputs[1].value,
+                            parseInt(inputs[2].value,10),
+                            inputs[3].checked));
+        localStorageUpdate();       //Update the localStorage 
+        toggleVisibility();         //Hides the input section
+        displayAll();               //Updates the shelf
+    }
 }
 //Responsible for swapping between the display and input sections
 function toggleVisibility() {
