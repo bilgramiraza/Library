@@ -4,13 +4,13 @@
     font-family: 'Roboto Slab', serif;
     --color-primary:#a52a2a;
     --color-primaryDark:#862323;
-    --color-compliment:#D4A0A7;
-    --color-accentOne:#99C24D;
-    --color-accentTwo:#1D3461;
-    --color-highlight:#0094C6;
+    --color-compliment:#d4a0a7;
+    --color-accentOne:#99c24d;
+    --color-accentTwo:#1d3461;
+    --color-highlight:#0094c6;
     --color-gray:#808080;
     --color-black:#000000;
-    --color-white:#FFFFFF;
+    --color-white:#ffffff;
 }
 
 /*Body*/
@@ -204,4 +204,5 @@ button{
 #submit:hover,#cancel:hover{
     outline: var(--color-highlight) solid 0.0625em;
 }
+/*Input Section*/ 
 /*Display/Input Section*/
