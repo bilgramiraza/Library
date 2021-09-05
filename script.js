@@ -55,6 +55,14 @@ function addBook(){
         toggleVisibility();
         return;
     }
+    if(inputs[0].value==="" ||
+       inputs[1].value==="" ||
+       inputs[2].value===""){
+        alert('Please Fill All Fields');
+        toggleVisibility();
+        return;
+    }
+
     //Pushing the New Book object into the array
     library.push(new Book(inputs[0].value,
                         inputs[1].value,
