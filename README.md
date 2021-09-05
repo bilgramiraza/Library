@@ -6,7 +6,7 @@
   <h3 align="center">Library</h3>
 
   <p align="center">
-    An online Library using HTML,CSS and vanilla Javascript
+    An online Library built using HTML,CSS and vanilla Javascript
     <br />
     <a href="https://bilgramiraza.github.io/Library/">View Demo</a>
   </p>
@@ -34,8 +34,14 @@
 
 ![Library Webpage Screenshot](https://raw.githubusercontent.com/bilgramiraza/Library/main/Images/WebPage.png)
 
-This project is built using HTML/CSS and vanilla JavaScript
+This website's purpose is to store details about books a user has read or is planning to read.
 
+This project is built using HTML/CSS and vanilla JavaScript
+The Project's main features include 
+*Add and Remove books to the site
+*Edit the Read status of the book with the click of a single button
+*The site will remember the books entered by the user using the WebStorage API
+*Easily See/Access any book using the display Shelf on the left side of the screen
 
 ### Built With
 
