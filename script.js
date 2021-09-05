@@ -60,6 +60,7 @@ function addBook(){
        inputs[2].value===""){
         alert('Please Fill All Fields');
         toggleVisibility();
+        addBookHandling();     
         return;
     }
 
